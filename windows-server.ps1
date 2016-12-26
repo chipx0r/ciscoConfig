@@ -28,8 +28,8 @@ function enable_iis_common_http_features()
 
 function enable_iis_application_development_features()
 {
-    Add-WindowsFeature Web-Asp-Net
-    Add-WindowsFeature Web-Net-Ext
+    Add-WindowsFeature Web-Asp-Net45
+    Add-WindowsFeature Web-Net-Ext45
     Add-WindowsFeature Web-ISAPI-Ext
     Add-WindowsFeature Web-ISAPI-Filter
 }
