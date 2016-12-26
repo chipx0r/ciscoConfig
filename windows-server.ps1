@@ -37,7 +37,6 @@ function enable_iis_application_development_features()
 function enable_iis_health_and_diagnostics_features()
 {
     Add-WindowsFeature Web-Http-Logging
-    Add-WindowsFeature Web-Request-Monitor
     Add-WindowsFeature Web-Log-Libraries
     Add-WindowsFeature Web-Request-Monitor
 }
@@ -62,8 +61,8 @@ function enable_iis_performance_features()
 
 function enable_iis_management_tools()
 {
-    Add-WindowsFeature Web-Mgmt-Tools
     Add-WindowsFeature Web-Mgmt-Console
+	Add-WindowsFeature Web-Scripting-Tools
 }
 
 
