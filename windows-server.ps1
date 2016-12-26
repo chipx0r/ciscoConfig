@@ -38,21 +38,20 @@ function enable_iis_health_and_diagnostics_features()
 {
     Add-WindowsFeature Web-Http-Logging
     Add-WindowsFeature Web-Request-Monitor
-	Add-WindowsFeature Web-Log-Libraries
-	Add-WindowsFeature Web-Request-Monitor
+    Add-WindowsFeature Web-Log-Libraries
+    Add-WindowsFeature Web-Request-Monitor
 }
 
 function enable_iis_security_features()
 {
     Add-WindowsFeature Web-Filtering
-	Add-WindowsFeature Web-Filtering
-	Add-WindowsFeature Web-Basic-Auth
-	Add-WindowsFeature Web-Client-Auth
-	Add-WindowsFeature Web-Digest-Auth
-	Add-WindowsFeature Web-Cert-Auth
-	Add-WindowsFeature Web-IP-Security
-	Add-WindowsFeature Web-Url-Auth
-	Add-WindowsFeature Web-Windows-Auth
+    Add-WindowsFeature Web-Basic-Auth
+    Add-WindowsFeature Web-Client-Auth
+    Add-WindowsFeature Web-Digest-Auth
+    Add-WindowsFeature Web-Cert-Auth
+    Add-WindowsFeature Web-IP-Security
+    Add-WindowsFeature Web-Url-Auth
+    Add-WindowsFeature Web-Windows-Auth
 }
 
 function enable_iis_performance_features()
