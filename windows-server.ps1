@@ -1,11 +1,11 @@
 function enable_net_3_5_features()
 {
-    Add-WindowsFeature NET-Framework-Features
+    Add-WindowsFeature NET-Framework-Core
 }
 
 function enable_net_4_5_features()
 {
-    Add-WindowsFeature NET-Framework-45-Features
+    Add-WindowsFeature NET-Framework-45-Core
 }
 
 function enable_wcf_4_5_features()
