@@ -62,7 +62,7 @@ function enable_iis_performance_features()
 function enable_iis_management_tools()
 {
     Add-WindowsFeature Web-Mgmt-Console
-	Add-WindowsFeature Web-Scripting-Tools
+    Add-WindowsFeature Web-Scripting-Tools
 }
 
 
