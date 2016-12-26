@@ -10,20 +10,20 @@ function enable_net_4_5_features()
 
 function enable_wcf_4_5_features()
 {
-	Add-WindowsFeature NET-Framework-45-ASPNET
-	Add-WindowsFeature NET-WCF-Services45
-	Add-WindowsFeature NET-WCF-HTTP-Activation45
+    Add-WindowsFeature NET-Framework-45-ASPNET
+    Add-WindowsFeature NET-WCF-Services45
+    Add-WindowsFeature NET-WCF-HTTP-Activation45
 }
 
 function enable_iis_common_http_features()
 {
-	Add-WindowsFeature Web-WebServer
-	Add-WindowsFeature Web-Common-Http
-	Add-WindowsFeature Web-Default-Doc
-	Add-WindowsFeature Web-Dir-Browsing
-	Add-WindowsFeature Web-Http-Errors
-	Add-WindowsFeature Web-Static-Content
-	Add-WindowsFeature Web-Http-Redirect    
+    Add-WindowsFeature Web-WebServer
+    Add-WindowsFeature Web-Common-Http
+    Add-WindowsFeature Web-Default-Doc
+    Add-WindowsFeature Web-Dir-Browsing
+    Add-WindowsFeature Web-Http-Errors
+    Add-WindowsFeature Web-Static-Content
+    Add-WindowsFeature Web-Http-Redirect    
 }
 
 function enable_iis_application_development_features()
