@@ -15,6 +15,17 @@ function enable_wcf_4_5_features()
     Add-WindowsFeature NET-WCF-HTTP-Activation45
 }
 
+function enable_application_server_features()
+{
+    Add-WindowsFeature AS-NET-Framework
+    Add-WindowsFeature AS-TCP-Port-Sharing
+    Add-WindowsFeature AS-Web-Support
+    Add-WindowsFeature AS-HTTP-Activation
+    Add-WindowsFeature AS-MSMQ-Activation
+    Add-WindowsFeature AS-Named-Pipes
+    Add-WindowsFeature AS-TCP-Activation
+}
+
 function enable_iis_common_http_features()
 {
     Add-WindowsFeature Web-WebServer
@@ -98,5 +109,8 @@ enable_iis_management_tools
 
 Write-Host ("Enable WCF 4.5 features")
 enable_wcf_4_5_features
+
+Write-Host ("Enable Application Server features")
+enable_application_server_features
 
 Write-Host('Application Server Setup complete')
