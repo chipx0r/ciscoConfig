@@ -23,3 +23,5 @@ ALTER TABLE SystemEvents RENAME SystemEvents_2018;
 ALTER TABLE SystemEvents_copy RENAME SystemEvents;
 
 UNLOCK TABLES;
+
+--DELETE FROM SystemEvents_2018 WHERE EXTRACT(YEAR FROM ReceivedAt) = 2019;
