@@ -1,0 +1,25 @@
+-- If your table is really large, and it very well may be if you've the need to rotate it, you'll want to make sure the column that holds the timestamp/date is indexed.
+
+-- WARNING: This script incurs a write lock for the duration of the trigger recreation and table rename. If your application can't handle this, you might lose data!
+
+-- Create our new skeleton table
+CREATE TABLE SystemEvents_copy LIKE SystemEvents;
+
+-- Replace the interval with the timespan of data you'd like to keep, or
+-- replace this statement with one that stores an id in the local variable of which all higher will be retained
+SELECT MIN(id) INTO @end_id FROM SystemEvents WHERE EXTRACT(YEAR FROM ReceivedAt) = 2019;
+
+-- Begin copy of data we want to retain
+INSERT INTO SystemEvents_copy
+  SELECT * FROM SystemEvents WHERE id >= @end_id;
+
+-- Lock tables so that trigger processing does not lapse during the following operations
+LOCK TABLE
+  SystemEvents WRITE,
+  SystemEvents_copy WRITE;
+
+-- Let skeleton table take the old's place
+ALTER TABLE SystemEvents RENAME SystemEvents_2018;
+ALTER TABLE SystemEvents_copy RENAME SystemEvents;
+
+UNLOCK TABLES;
