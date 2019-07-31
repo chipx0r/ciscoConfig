@@ -1,0 +1,20 @@
+BEGIN {
+    FIELDWIDTHS="31 15 9 50";
+        }
+NR == 1 {
+                print "{| class=\"wikitable sortable\" border=\"1px\" "
+                print "|+Lista de Direcciones IP de Locatarios (Nodos Utilizados) "
+                print "|-"
+         }
+NR == 26{
+                #print "! Interface !! Status !! Protocol !! Description"
+                print "! " $1 "!! " $2 "!! " $3 "!! " $4
+        }
+NR > 26 {
+        print "|-"
+        print "| "$1 " || " $2 " || " $3 " || "$4
+        }
+END {
+                 print "|}"
+        }
+
