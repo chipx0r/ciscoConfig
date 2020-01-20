@@ -4,6 +4,9 @@
 # Trap Ctrl + C command and exit the script.
 trap 'exit 1' 2
 
+# Prevent dirs with spaces
+IFS=$'\n'
+
 # Strip trailing slashes from argument and test it's a directory.
 TARGET=${1%/}
 if [[ ! -d $TARGET ]]; then
