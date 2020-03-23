@@ -1,0 +1,3 @@
+#!/bin/sh
+/sbin/route -n add -net 172.24.20.0/24 -iface $1
+/sbin/route -n add -net 172.24.32.0/24 -iface $1
