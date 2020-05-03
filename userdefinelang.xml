@@ -112,7 +112,7 @@
             <Keywords name="Folder-"></Keywords>
             <Keywords name="Operators">&apos; - ! &quot; # $ % &amp; ( ) * , . / : ; ? @ [ \ ] ^ _ ` { | } ~ + &lt; = &gt; Exception</Keywords>
             <Keywords name="Comment">1 2 0</Keywords>
-            <Keywords name="Words1">SEVERE ERROR Caused</Keywords>
+            <Keywords name="Words1">SEVERE ERROR Caused FATAL</Keywords>
             <Keywords name="Words2">WARN WARNING</Keywords>
             <Keywords name="Words3">DEBUG</Keywords>
             <Keywords name="Words4">INFO</Keywords>
