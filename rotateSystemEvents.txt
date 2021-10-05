@@ -25,3 +25,5 @@ ALTER TABLE SystemEvents_copy RENAME SystemEvents;
 UNLOCK TABLES;
 
 --DELETE FROM SystemEvents_2018 WHERE EXTRACT(YEAR FROM ReceivedAt) = 2019;
+-- Se puede usar por mes:
+-- EXTRACT(YEAR_MONTH FROM ReceivedAt) = 202110
