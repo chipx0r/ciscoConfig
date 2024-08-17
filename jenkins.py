@@ -5,10 +5,6 @@ password = 'tokenpass'
 jenkinstoken = 'uat'
 
 def doCall():
-    data = {'url': '@REPO_URL@',
-       'branch': repo[node].branch(),
-       'changesetId': node}
-
     base64string = base64.b64encode('%s:%s' % (username, password))
     url = 'http://192.168.4.16:8080/job/AspNet8DockerBuild/build?token=' + jenkinstoken
     print 'CI-CD trigger:' + url
