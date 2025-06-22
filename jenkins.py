@@ -2,11 +2,12 @@ import urllib, urllib2, base64
 targetbranch = 'UAT'
 username = 'admin'
 password = 'tokenpass'
+jenkinsproject = 'AspNet8DockerBuild'
 jenkinstoken = 'uat'
 
 def doCall():
     base64string = base64.b64encode('%s:%s' % (username, password))
-    url = 'http://192.168.4.16:8080/job/AspNet8DockerBuild/build?token=' + jenkinstoken
+   url = 'http://192.168.4.16:8080/job/' + jenkinsproject + '/build?token=' + jenkinstoken
     print 'CI-CD trigger:' + url
     req = urllib2.Request(url)
     req.add_header('Authorization', 'Basic %s' % base64string)
