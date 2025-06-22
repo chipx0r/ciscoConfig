@@ -2,7 +2,7 @@ import urllib, urllib2, base64
 targetbranch = 'UAT'
 username = 'admin'
 password = 'tokenpass'
-jenkinsproject = ['AspNet8DockerBuild']
+jenkinsprojects = ['AspNet8DockerBuild']
 jenkinstoken = 'uat'
 
 def doCall():
